@@ -7,13 +7,14 @@
     <title>Code Testing</title>
 </head>
 <body>
-    <p id="clickable" style="font-size: 24px;">Click to copy url</p>
+    <button id="clickable" style="font-size: 24px;">Click to copy url</button>
     <script>
         window.addEventListener("load",function(){
             let el = document.getElementById("clickable");
             el.addEventListener("click",function(){
                 (async function(){
                     await navigator.clipboard.writeText("Hello from the outsideeeeee!");
+                    alert("hello");
                 })();
             });
         });
